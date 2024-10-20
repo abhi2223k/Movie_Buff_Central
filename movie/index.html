@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Movie Buff Central</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./Media/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Explore your favorite movie franchises with character bios, movie trailers, daily quotes, and a fun trivia quiz!">
+</head>
+<body>
+    <!-- Main Navigation -->
+    <header>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#characters">Characters</a></li>
+                <li><a href="#trailers">Trailers</a></li>
+                <li><a href="#quotes">Quotes</a></li>
+                <li><a href="#quiz">Trivia Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <main>
+        <section id="home" aria-labelledby="home-heading">
+           <div> <h1 id="home-heading">Welcome to Movie Buff Central</h1>
+            <p>Your one-stop hub for everything about your favorite movie franchises!</p></div>
+            <div class="poster-slider" aria-label="Movie Posters">
+                <!-- Movie Poster 1: Pirates of the Caribbean -->
+                <div class="poster-item">
+                    <img class="poster" src="Media/pirates of carrebian.png" alt="Pirates of the Caribbean Poster">
+                    <h3>Pirates of the Caribbean: The Curse of the Black Pearl</h3>
+                    <button onclick="showCharacters('pirates')">Show Characters</button>
+                    <p>Captain Jack Sparrow embarks on a swashbuckling adventure to retrieve a cursed pirate treasure.</p>
+                </div>
+
+                <!-- Movie Poster 2: Fast and Furious -->
+                <div class="poster-item">
+                    <img class="poster" src="Media/fast and furious.png" alt="Fast and Furious Poster">
+                    <h3>Fast and Furious</h3>
+                    <button onclick="showCharacters('fast')">Show Characters</button>
+                    <p>A thrilling action-packed franchise that revolves around fast cars, street racing, and high-octane heists.</p>
+                </div>
+
+                <!-- Movie Poster 3: Kalki -->
+                <div class="poster-item">
+                    <img class="poster" src="Media/kalki.png" alt="Kalki Poster">
+                    <h3>Kalki</h3>
+                    <button onclick="showCharacters('kalki')">Show Characters</button>
+                    <p>An epic mythological tale featuring Kalki, the tenth avatar of Vishnu, prophesied to bring the end of the world.</p>
+                </div>
+
+                <!-- Movie Poster 4: Avengers -->
+                <div class="poster-item">
+                    <img class="poster" src="Media/avenger.png" alt="Avengers Poster">
+                    <h3>Avengers: Endgame</h3>
+                    <button onclick="showCharacters('avengers')">Show Characters</button>
+                    <p>The epic conclusion to the Marvel Cinematic Universe's Infinity Saga against the powerful Thanos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Character Bios Section -->
+        <section id="characters" aria-labelledby="characters-heading">
+            <h2 id="characters-heading">Meet the Characters</h2>
+            <p>Click On The Movie To See The Characters</p>
+            <div class="character-grid">
+                <!-- Pirates Characters -->
+                <article class="character-card hidden" data-movie="pirates">
+                    <img src="Media/jack sparrow.jpeg" alt="Jack Sparrow" class="character-image">
+                    <h3>Jack Sparrow</h3>
+                </article>
+                <article class="character-card hidden" data-movie="pirates">
+                    <img src="Media/will turner.jpeg" alt="Will Turner" class="character-image">
+                    <h3>Will Turner</h3>
+                </article>
+                <article class="character-card hidden" data-movie="pirates">
+                    <img src="Media/davyjones.jpeg" alt="Davy Jones" class="character-image">
+                    <h3>Davy Jones</h3>
+                </article>
+                <article class="character-card hidden" data-movie="pirates">
+                    <img src="Media/elizabeth swan.jpeg" alt="Elizabeth Swan" class="character-image">
+                    <h3>Elizabeth Swan</h3>
+                </article>
+
+                <!-- Fast and Furious Characters -->
+                <article class="character-card hidden" data-movie="fast">
+                    <img src="Media/vin disel.png" alt="Dom Toretto" class="character-image">
+                    <h3>Dom Toretto</h3>
+                </article>
+                <article class="character-card hidden" data-movie="fast">
+                    <img src="Media/paul walker.png" alt="Brian O'Conner" class="character-image">
+                    <h3>Brian O'Conner</h3>
+                </article>
+                <article class="character-card hidden" data-movie="fast">
+                    <img src="Media/rock.png" alt="Hobbs" class="character-image">
+                    <h3>Hobbs</h3>
+                </article>
+
+                <!-- Kalki Characters -->
+                <article class="character-card hidden" data-movie="kalki">
+                    <img src="Media/prabhas.png" alt="Bhairava" class="character-image">
+                    <h3>Bhairava</h3>
+                </article>
+                <article class="character-card hidden" data-movie="kalki">
+                    <img src="Media/dipika.png" alt="Sumati" class="character-image">
+                    <h3>Sumati Devi</h3>
+                </article>
+                <article class="character-card hidden" data-movie="kalki">
+                    <img src="Media/amitabh.png" alt="Amitabh" class="character-image">
+                    <h3>Ashwathama</h3>
+                </article>
+
+                <!-- Avengers Characters -->
+                <article class="character-card hidden" data-movie="avengers">
+                    <img src="Media/ironman.png" alt="Iron Man" class="character-image">
+                    <h3>Iron Man</h3>
+                </article>
+                <article class="character-card hidden" data-movie="avengers">
+                    <img src="Media/cpatain america.png" alt="Captain America" class="character-image">
+                    <h3>Captain America</h3>
+                </article>
+                <article class="character-card hidden" data-movie="avengers">
+                    <img src="Media/hulk.png" alt="Hulk" class="character-image">
+                    <h3>Hulk</h3>
+                </article>
+            </div>
+        </section>
+
+        <!-- Trailers Section -->
+        <section id="trailers" aria-labelledby="trailers-heading">
+            <h2 id="trailers-heading">Watch the Trailers</h2>
+            <div class="trailer-container">
+                <!-- Pirates of the Caribbean Trailer -->
+                <div class="trailer-item">
+                    <h3>Pirates of the Caribbean: The Curse of the Black Pearl</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/naQr0uTrH_s" title="Pirates of the Caribbean Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+        
+                <!-- Fast and Furious Trailer -->
+                <div class="trailer-item">
+                    <h3>Fast and Furious</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/2TAOizOnNPo" title="Fast and Furious Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+        
+                <!-- Avengers: Endgame Trailer -->
+                <div class="trailer-item">
+                    <h3>Avengers: Endgame</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/TcMBFSGVi1c" title="Avengers: Endgame Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote of the Day Section -->
+        <section id="quotes" aria-labelledby="quotes-heading">
+            <h2 id="quotes-heading">Quote of the Day</h2>
+            <blockquote id="quoteDisplay">"This is where the quote will appear."</blockquote>
+            <button onclick="generateQuote()">Show Another Quote</button>
+        </section>
+
+        <!-- Updated Quiz Section -->
+        <section id="quiz" aria-labelledby="quiz-heading">
+            <h2 id="quiz-heading">Test Your Movie Knowledge</h2>
+            <div id="quiz-container">
+                <div id="questionContainer">
+                    <p id="question">Question will appear here.</p>
+                    <div id="answerButtons" class="btn-container"></div>
+                    <p>Time Left: <span id="timeLeft">30</span> seconds</p>
+                </div>
+                <button id="nextButton" class="btn" onclick="nextQuestion()">Next</button>
+            </div>
+            <div id="resultContainer" class="hidden">
+                <h3>Your Score: <span id="finalScore"></span></h3>
+                <button onclick="restartQuiz()">Restart Quiz</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Movie Buff Central. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
